@@ -1,0 +1,43 @@
+{
+    "name": "tale/framework",
+    "description": "",
+    "license": "MIT",
+    "scripts": {
+        "merge": "monorepo-builder merge",
+        "pre-install-cmd": "@merge"
+    },
+    "replace": {
+        "tale/ansi": "self.version",
+        "tale/serializer": "self.version",
+        "tale/stream": "self.version",
+        "tale/type-info": "self.version",
+        "tale/var-dumper": "self.version"
+    },
+    "autoload": {
+        "files": [
+            "packages/ansi/src/functions.php",
+            "packages/var-dumper/src/functions.php"
+        ],
+        "psr-4": {
+            "Tale\\": [
+                "packages/ansi/src",
+                "packages/serializer/src",
+                "packages/stream/src",
+                "packages/type-info/src",
+                "packages/var-dumper/src"
+            ]
+        }
+    },
+    "require": {
+        "php": "~8.0",
+        "ext-json": "*",
+        "psr/http-factory": "^1.0",
+        "psr/http-message": "^1.0"
+    },
+    "require-dev": {
+        "composer/composer": "^2.0",
+        "phpstan/phpstan": "^0.12.56",
+        "phpunit/phpunit": "^7.3",
+        "symplify/monorepo-builder": "^8.3"
+    }
+}

@@ -1,0 +1,9 @@
+<?php declare(strict_types=1);
+
+namespace Tale\Functional;
+
+function set_key($key, $value, iterable $items): iterable
+{
+    yield from $items;
+    yield $key => $value;
+}

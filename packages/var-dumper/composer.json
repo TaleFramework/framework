@@ -1,0 +1,24 @@
+{
+    "name": "tale/var-dumper",
+    "description": "",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Torben Koehn",
+            "email": "torben@talesoft.codes"
+        }
+    ],
+    "require": {
+        "php": "~8.0",
+        "psr/http-message": "^1.0",
+        "tale/stream": "^0.1.0",
+        "tale/ansi": "^0.1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Tale\\": "src"
+        },
+        "files": ["src/functions.php"]
+    }
+}

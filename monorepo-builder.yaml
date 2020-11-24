@@ -1,0 +1,12 @@
+parameters:
+    data_to_append:
+        require-dev:
+            phpunit/phpunit: '^7.3'
+            symplify/monorepo-builder: '^8.3'
+
+    directories_to_repositories:
+        packages/ansi: 'git@github.com:TaleFramework/ansi.git'
+        packages/serializer: 'git@github.com:TaleFramework/serializer.git'
+        packages/stream: 'git@github.com:TaleFramework/stream.git'
+        packages/type-info: 'git@github.com:TaleFramework/type-info.git'
+        packages/var-dumper: 'git@github.com:TaleFramework/var-dumper.git'

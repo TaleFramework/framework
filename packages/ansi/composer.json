@@ -1,0 +1,21 @@
+{
+    "name": "tale/ansi",
+    "description": "",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Torben Koehn",
+            "email": "torben@talesoft.codes"
+        }
+    ],
+    "require": {
+        "php": "~8.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Tale\\": "src"
+        },
+        "files": ["src/functions.php"]
+    }
+}

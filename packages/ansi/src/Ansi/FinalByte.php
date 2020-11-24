@@ -1,0 +1,54 @@
+<?php declare(strict_types=1);
+
+namespace Tale\Ansi;
+
+/**
+ * Possible Final Byte Values for Escape Sequences
+ */
+final class FinalByte
+{
+    private function __construct() {}
+
+    public const NONE = '';
+
+    /**
+     * ED - ERASE DISPLAY (ERASE IN PAGE)
+     *
+     * ED causes some or all character positions of the active page
+     * (the page which contains the active presentation position in the
+     * presentation component) to be put into the erased state, depending
+     * on the parameter values
+     *
+     * @type string
+     */
+    public const ED = 'J';
+
+    /**
+     * EL - ERASE IN LINE
+     *
+     * EL causes some or all character positions of the active line (the
+     * line which contains the active data position in the data component)
+     * to be put into the erased state, depending on the parameter values
+     *
+     * @type string
+     */
+    public const EL = 'K';
+
+    /**
+     * SGR - SELECT GRAPHIC RENDITION
+     *
+     * SGR is used to establish one or more graphic rendition aspects for
+     * subsequent text. The established aspects remain in effect until the
+     * next occurrence of SGR in the data stream, depending on the setting
+     * of the GRAPHIC RENDITION COMBINATION MODE (GRCM). Each graphic
+     * rendition aspect is specified by a parameter value
+     *
+     * @type string
+     */
+    public const SGR = 'm';
+
+    // @TODO: Add more Escape Code Final Bytes
+    // @see http://www.ecma-international.org/publications/files/ECMA-ST/Ecma-048.pdf
+    // @see http://www.termsys.demon.co.uk/vtansi.htm
+    // @see http://en.wikipedia.org/wiki/ANSI_escape_code
+}
